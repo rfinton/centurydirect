@@ -81,7 +81,7 @@ window.onload = function() {
     if(!triggered()) {
       document.cookie = 'trigger';
       var url = 'http://52.91.158.44/CenturyDirect/trigger_notifications/visited.php';
-      $.post(url, contact);
+      //$.post(url, contact);
     }
   }
 };
