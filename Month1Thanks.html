@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta http-equiv="pragma" content="no-cache">
+		<meta http-equiv="cache-control" content="no-cache">
+		<title>Century Direct</title>
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+		<link rel="stylesheet" href="//s3.amazonaws.com/centurydirect/node_modules/bootstrap/dist/css/bootstrap.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="//s3.amazonaws.com/centurydirect/assets/css/style.css">
+		<link rel="stylesheet" href="//s3.amazonaws.com/centurydirect/assets/css/formstyle.css">
+		<link rel="stylesheet" href="//s3.amazonaws.com/centurydirect/assets/css/mobile.css">
+	</head>
+
+	<body>
+		<div class="hands thanks">
+			<img width="420" src="//s3.amazonaws.com/centurydirect/assets/images/hands.png">
+		</div>
+
+		<div class="note thanks">
+			<img id="note" style="width:100%; opacity:0;" src="//s3.amazonaws.com/centurydirect/assets/images/colorfulMusic.png">
+		</div>
+
+		<div class="container-main thanks">
+			<div id="gradient-left">
+				<svg xmlns="http://www.w3.org/2000/svg">
+					<defs>
+						<linearGradient id="gradient" x1="0%" x2="100%" y1="0%" y2="0%">
+							<stop offset="0%" style="stop-color:rgb(150,150,150);stop-opacity:1" />
+							<stop offset="100%" style="stop-color:rgb(255,255,255);stop-opacity:0" />
+						</linearGradient>
+					</defs>
+					<rect fill="url(#gradient)" x="0" y="0"/>
+				</svg>
+			</div>
+	
+			<div id="gradient-right">
+				<svg xmlns="http://www.w3.org/2000/svg">
+					<defs>
+						<linearGradient id="gradient"  x1="0%" x2="100%" y1="0%" y2="0%">
+								<stop offset="0%" style="stop-color:rgb(150,150,150);stop-opacity:1" />
+								<stop offset="100%" style="stop-color:rgb(255,255,255);stop-opacity:0" />
+						</linearGradient>
+					</defs>
+					<rect fill="url(#gradient)" x="0" y="0"/>
+				</svg>
+			</div>
+
+			<div class="text thanks">
+				
+				<div class="stage-2 thanks">
+					Thanks ##firstname##!<br>Over the next few weeks you'll be receiving information through email or direct mail about some of the services we offer. Each piece is tailored for you and plays an instrumental part in orchestrating a marketing campaign.<br>
+					<br>
+					In the meantime, check out our home <a target="_blank" href="http://www.centurydirect.net">website</a> to learn more about our services.<br>
+					<br>
+					<a id="eBrochure" href="http://centurydirect.s3-website-us-east-1.amazonaws.com/assets/dl/CenturyDirect_Brochure.pdf" class="btn btn-info btn-lg" download>
+						<span class="glyphicon glyphicon-download-alt"></span> Download Our Brochure
+					</a>
+        </div>
+
+				<div class="page-footer">
+					<div class="footer-info">&copy; 2017 Century Direct</div>
+					<div class="bullet">&bull;</div>
+					<div class="footer-info"><i class="fa fa-map-marker"></i> 
+						&nbsp; 15 Enter Lane, Islandia, NY 11749
+					</div>
+					<div class="bullet">&bull;</div>
+					<div class="footer-info"><i class="fa fa-phone"></i> &nbsp; 212-763-0600</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="company-logo thanks">
+			<img width="300" src="//s3.amazonaws.com/centurydirect/assets/images/CenturyDirectLogoFullColor.svg">
+			<br>
+			<span class="tagline">The way we put it all together is what sets us apart</span>
+		</div>
+
+		<noscript style="width:100%; height:3000px; background:#000; color:#fff; font-size:18pt; position:absolute; top:0; left:0; z-index:10;">
+			<div style="padding-top:3em; width:60%; margin:auto;">If you are seeing this message it means your browser is blocking javascript. This site requires javascript to be enabled to display correctly.</div>
+		</noscript>
+
+		<script>
+			var contact = {
+				purl: '##purl##',
+				firstname: '##firstname##',
+				lastname: '##lastname##',
+				email: '##email##',
+				title: '##title##',
+				company: '##company##',
+				address: '##address1## ##city##, ##state## ##zip##',
+				industry: '##industry##',
+				list: '##list##',
+				form_resp: '##form_resp1##',
+				page: 'Month1 LP'
+			};
+		</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="//s3.amazonaws.com/centurydirect/assets/js/controller.js"></script>
+
+	</body>
+</html>

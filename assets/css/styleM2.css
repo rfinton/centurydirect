@@ -1,0 +1,170 @@
+* {font-family: 'Ubuntu', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+.bgimg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;}
+.bgimg img {
+  width: 100%;}
+.bgimg-mobile {
+  display: none;}
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;}
+.row {
+  margin-right: 0;
+  margin-left: 0;}
+.container-body {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 30px;}
+.company-logo {
+  background-color: #ffffff;
+  text-align: center;
+  width: 100%;}
+.company-logo img {
+  max-width: 420px;
+  width: 70%;}
+.page-footer {
+  width: 100%;
+  background: #434f7e;
+  padding: 30px;
+  text-align: center;
+  color: #fff;
+  margin-top: 30px;}
+.footer-info {
+  display: inline-block;
+  font-size: 11pt;
+  font-family: Arial, Helvetica, sans-serif;}
+.bullet {
+  display: inline;
+  margin: 0 15px;}
+form {
+  margin-top: 30px;
+  padding-left: 15px;
+  padding-right: 15px;}
+.col-right {
+  background: #ffffff;
+  padding: 15px;
+  margin: 30px;}
+.fs-14 {
+  font-weight: normal;
+  font-size: 14pt;}
+#comment {
+  white-space:nowrap; 
+  margin-top:30px;
+  margin-left: 15px;
+  display: inline-block;}
+#comment input.form-control {
+  width: initial;
+  display: inline;}
+.radio label {
+  margin-top: 15px;}
+table td {
+  padding: 15px;}
+.services {
+  margin: 0 auto;
+  width: 70%; 
+  background:rgba(0,0,0,0.4);}
+input[type=submit] {
+  background: #434f7e;
+  padding: 12px 24px;
+  margin: 15px 0;}
+h1 {
+  margin-left: -15px;
+  text-align: center;
+  opacity: 0;}
+.icons {
+  width: 100px;
+  height: 100px;}
+.icon-links {
+  margin-top: 120px;}
+.icon-links.thanks {
+  margin-top: 30px;}
+.company-logo.mobile {
+  display: none;}
+#mail-services {
+  margin-top: 15%;}
+.col-right {
+  border: solid 6px black;}
+.mobile-text {
+  display: none;}
+p {
+  font-weight: bold;}
+#thanks-text {
+  margin: 60px 0;
+  text-align: center;}
+.p-contrast {
+  display: inline-block;
+  background: rgba(0,0,0,0.4);
+  padding: 12px;}
+#dl {
+  margin: 60px 0;
+  text-align: center;}
+#eBrochure {
+  background: #434f7e;}
+.mobile-m2 {
+  display: none;}
+.m2typg {
+  margin: 0 auto; 
+  background: white;
+  padding: 30px; 
+  border: 3px solid black; 
+  border-radius: 6px; 
+  max-width: 575px;}
+
+
+@media screen and (max-width: 768px) {
+  .mobile-m2 {
+    margin-top: 30px;
+    display: block;}
+  .desktop {
+    display: none;}
+  .bgimg-mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: block;}
+  .bgimg-mobile img {
+    width: 100%;
+    height: 100vh;}
+  .bgimg {
+    display: none;}
+  .container-fluid {
+    padding-left: 0;
+    padding-right: 0;}
+  .company-logo {
+    display: none;}
+  .company-logo.mobile {
+    width: 90%;
+    display: block;
+    margin: 30px auto;
+    padding: 12px;
+    background: rgba(255,255,255,0.8);}
+  #mail-services {
+    margin-top: 30px;}
+  .col-right {
+    margin: 30px 0 0;
+    padding: 15px 0;}
+  .col-right.thanks {
+    display: none;}
+  #comment {
+    white-space: initial;}
+  .resp-td {
+    display: none;}
+  .mobile-text {
+    color: white;
+    display: inline;}
+  .icons {
+    width: 50px;}
+  .icon-links {
+    margin-top: 30px;}
+}
+
+@media screen and (max-width: 767px) {
+  .col-right {display:none;}
+  .icon-links p {margin: 0 15px;}
+}

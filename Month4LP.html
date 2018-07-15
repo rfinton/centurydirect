@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="uft-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="http://s3.amazonaws.com/centurydirect/assets/css/m4style.css" rel="stylesheet">
+    <script>
+      var industry = "##industry##";
+      var fn = "##firstname##";
+      var softLoad = function() {
+        document.body.classList.add('transition-1');
+      };
+    </script>
+    <style>
+      #purlGreet, #gurlGreet { display: none; }
+    </style>
+  </head>
+  <body onload="softLoad()">
+    <div class="container-fluid">
+      <div class="row faux">
+        <div class="col-xs-12 col-sm-6">
+          <p style="color:#ffffff; font-size:28px; margin:20px; text-shadow:0px 0px 10px #000000;">
+            <span id="purlGreet">##firstname##, consider</span><span id="gurlGreet">Consider</span> Century Direct's newest technologies to better connect with your audience.</p>
+          <div class="jumbotron">
+            <h1 class="display-4">Faux Pen Technology</h1>
+            <p class="lead"></p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6"></div>
+      </div>
+      <div class="row imb">
+        <div class="col-xs-12 col-sm-6"></div>
+        <div class="col-xs-12 col-sm-6">
+          <div class="jumbotron">
+            <h1 class="display-4">Intelligent Mail Tracking</h1>
+            <p class="lead"></p>
+          </div>
+        </div>
+      </div>
+      <div class="row envelope">
+        <div class="col-xs-12 col-sm-6">
+          <div class="jumbotron">
+            <h1 class="display-4">Custom Envelopes</h1>
+            <p class="lead"></p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6"></div>
+      </div>
+      <div class="row bridge">
+        <div class="col-xs-12 col-sm-6 verticalAlignCenter">
+          <div class="jumbotron" style="text-align:center;">
+            <img src="http://s3.amazonaws.com/centurydirect/assets/images/CenturyDirectLogoFullColor.svg">
+            <p class="lead">It's the way we put it all together that sets us apart.</p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+          <form method="post" onsubmit="return false;">
+            <h4></h4>
+            <div class="form-group">
+              <label for="fn">First name:</label>
+              <input id="fn" type="text" value="##firstname##" name="firstname" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="ln">Last name:</label>
+              <input id="ln" type="text" value="##lastname##" name="lastname" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input id="email" type="text" value="##email##" name="email" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="addr">Address:</label>
+              <input id="addr" type="text" value="##address1##" name="address1" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="city">City:</label>
+              <input id="city" type="text" value="##city##" name="city" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="state">State:</label>
+              <input id="state" type="text" value="##state##" name="state" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="zip">Zip:</label>
+              <input id="zip" type="text" value="##zip##" name="zip" class="form-control">
+            </div>
+            <input type="submit" class="btn btn-default" value="Send Me Samples">
+          </form>
+        </div>
+      </div>
+      <div class="row footer">
+        <div class="col-xs-12 col-sm-6">
+          Century Direct &bullet; 15 Enter Lane, Islandia, NY 11749 &bullet; 212-763-0600
+        </div>
+        <div class="col-xs-12 col-sm-6">
+          <img src="http://s3.amazonaws.com/centurydirect/assets/images/FDA-approved-logo_blue11.png">
+          <img src="http://s3.amazonaws.com/centurydirect/assets/images/hipaa_blue.png">
+          <img src="http://s3.amazonaws.com/centurydirect/assets/images/ssae.png">
+          &copy; 2017 Century Direct | All Rights Reserved
+        </div>
+      </div>
+    </div>
+
+    <div class="social">
+      <i class="fa fa-facebook"></i>
+      <i class="fa fa-google-plus"></i>
+      <i class="fa fa-linkedin"></i>
+      <i class="fa fa-twitter"></i>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://s3.amazonaws.com/centurydirect/assets/js/m4vars.js"></script>
+    <script src="http://s3.amazonaws.com/centurydirect/assets/js/m4script.js"></script>
+    <script>
+      var url = 'http://52.91.158.44/CenturyDirect/trigger_notifications/visited.php';
+      var href = location.href;
+      var begin = href.search('month');
+      var end = href.search('&');
+      var isseed = ##isseed##;
+      var contact = {
+				purl: '##purl##',
+				firstname: '##firstname##',
+				lastname: '##lastname##',
+				title: '##title##',
+				company: '##company##',
+				address: '##address1## ##city##, ##state## ##zip##',
+				industry: '##industry##',
+				list: '##list##',
+        page: 'Month4 LP',
+        origin: href.slice(begin, end)
+      };
+
+      if(contact.purl != "") $('#purlGreet').show();
+      else $('#gurlGreet').show();
+      if(contact.purl != "" && !isseed) $.post(url, contact);
+    </script>
+  </body>
+</html>

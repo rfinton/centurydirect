@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+		<meta http-equiv="pragma" content="no-cache">
+		<meta http-equiv="cache-control" content="no-cache">
+		<title>Century Direct</title>
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+		<link rel="stylesheet" href="http://s3.amazonaws.com/centurydirect/node_modules/bootstrap/dist/css/bootstrap.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://s3.amazonaws.com/centurydirect/assets/css/styleM3.css">
+  </head>
+  
+  <body>
+    <img id="logo" src="http://s3.amazonaws.com/centurydirect/assets/images/CenturyDirectLogoFullColor.svg">
+    <img class="bg" id="healthcare-bg" src="http://s3.amazonaws.com/centurydirect/assets/images/bgM3LpHealthWeb.jpg" alt="">
+    <img class="bg" id="finance-bg" src="http://s3.amazonaws.com/centurydirect/assets/images/bgM3LpFinancialWeb.jpg" alt="">
+    <img class="bg" id="customer-bg" src="http://s3.amazonaws.com/centurydirect/assets/images/bgM3LpCustomerWeb.jpg" alt="">
+
+    <div id="content" style="background:#DF7C3B;">
+      <p id="text">
+        <strong>Thanks ##firstname##!</strong><br/>
+        <br/>
+        Hey, can you hear that? It's the sound of your direct mail marketing campaign reaching a crescendo!<br/>
+        <br/>
+        Your audience will be intrigued by our imaginative mail pieces. Learn more by clicking the download link below and getting our free case study.
+      </p>
+
+      <center style="padding:30px 0;">
+        <a id="pdf" href="http://centurydirect.s3-website-us-east-1.amazonaws.com/assets/dl/CenturyDirect_Brochure.pdf" class="btn btn-info btn-lg" download>
+          <span class="glyphicon glyphicon-download-alt"></span> Download Case Study
+        </a>
+      </center>
+    </div>
+
+
+    <div class="envelopes">
+      <img class="cust-image" src="http://s3.amazonaws.com/centurydirect/assets/images/postitEnvelope03Cust.png" alt="">
+      <img class="cust-image" src="http://s3.amazonaws.com/centurydirect/assets/images/postitEnvelope04Cust.png" alt="">
+      <img class="cust-image" src="http://s3.amazonaws.com/centurydirect/assets/images/postitEnvelope05Cust.png" alt="">
+
+      <img class="health-image" src="http://s3.amazonaws.com/centurydirect/assets/images/postitEnvelope03Health.png" alt="">
+      <img class="health-image" src="http://s3.amazonaws.com/centurydirect/assets/images/postitEnvelope04Health.png" alt="">
+      <img class="health-image" src="http://s3.amazonaws.com/centurydirect/assets/images/postitEnvelope05Health.png" alt="">
+
+      <img class="finance-image" src="http://s3.amazonaws.com/centurydirect/assets/images/postitEnvelope03Finance.png" alt="">
+      <img class="finance-image" src="http://s3.amazonaws.com/centurydirect/assets/images/postitEnvelope04Finance.png" alt="">
+      <img class="finance-image" src="http://s3.amazonaws.com/centurydirect/assets/images/postitEnvelope05Finance.png" alt="">
+    </div>
+    
+    <script>
+      var contact = {
+        purl: '##purl##',
+        firstname: '##firstname##',
+        lastname: '##lastname##',
+        title: '##title##',
+        company: '##company##',
+        address: '##address1## ##city##, ##state## ##zip##',
+        industry: '##industry##',
+        list: '##list##',
+        action: 'Contact downloaded case study',
+        page: 'Month3 LP'
+      };
+    </script>
+    <script src="http://s3.amazonaws.com/centurydirect/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="http://s3.amazonaws.com/centurydirect/assets/js/m3-view.js"></script>
+  </body>
+</html>

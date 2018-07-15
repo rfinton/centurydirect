@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en" ng-app="app" ng-controller="main as ctrl">
+<head>
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache">
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,800" rel="stylesheet">
+  <style>
+    * { font-family: 'Nunito Sans', sans-serif; font-size: 2rem; }
+    .modal-content { background: black; }
+    label { color: #e9dab6; }
+    .modal-content { 
+      border-radius: 6px;
+      border: solid 1px #c09207; }
+
+    .section.splash {
+      text-align: center;
+      background: radial-gradient(gray, black, black); }
+    .splash img {
+      opacity: 0;
+      width: 50%; }
+
+    body > div > div:nth-child(2) { 
+      text-align: center;
+      background-color: black; }
+    img.shopping-bag { opacity: 0; width: 100%; }
+    img.rewards { opacity: 0; position: absolute; top: 0; left: 0; width: 50%; }
+    div.col-xs-12.col-sm-4 { padding-left: 0; padding-right: 0; }
+    div.col-xs-12.col-sm-8 {
+      text-align: left;
+      display: none;
+      padding: 30px;
+      background-image: url(assets/images/craftpaper_bg.jpeg);
+      background-size: cover;
+      background-repeat: no-repeat; }
+    div.col-xs-12.col-sm-8 img { width: 140px; }
+
+    .da-button {
+      cursor: pointer;
+      background: #f1c232;
+      background: -webkit-linear-gradient(#e9dab6, #c09207);
+      background: linear-gradient(#e9dab6, #c09207);
+      border: 1px solid #556699;
+      border-radius: 5px;
+      box-shadow: 0 1px #444444;
+      padding: 8px 20px;
+      color: #ffffff;
+      display: inline-block;
+      text-align: center;
+      text-shadow: 1px 1px #000000; }
+
+    .services-icons {
+      display: inline-block;
+      margin: 15px auto; }
+    .services-icons img {
+      cursor: pointer;
+      opacity: 0;
+      width: 80px;
+      height: 80px; }
+    .services-icons > div {
+      margin: 15px;
+      display: inline-block; }
+    .services-icons label {
+      display: none; }
+
+    .footer {
+      display: none;
+      text-align: center;
+      padding: 12px;
+      background-image: url(assets/images/craftpaper_bg.jpeg); }
+
+    .gold-dust { opacity: 0; }
+    .gold-dust-1 {
+      z-index: 1;
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background-color: #c09207; }
+
+    .gold-dust-2 {
+      z-index: 1;
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background-color: #e9e9e9; }
+
+
+    @media screen and (max-width: 420px) {
+      .splash img { width: 100%; }
+      .col-xs-12.col-sm-4 { padding: 0; }
+    }
+  </style>
+  <!-- AngularJS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
+
+  <!-- AngularFire -->
+  <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
+  <script>
+    var visitor = {
+      purl: 'RayFinton',
+      dates: [(new Date()).getTime()],
+      url: location.pathname
+    };
+  </script>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row section splash">
+      <img src="assets/images/logoWithTag.png">
+    </div>
+
+    <div class="row section">
+      <div class="col-xs-12 col-sm-4 left">
+        <img class="shopping-bag" src="assets/images/shoppingBag.jpg">
+        <img class="rewards" src="assets/images/rewards.png">
+      </div>
+
+      <div class="col-xs-12 col-sm-8">
+        <p><span style="font-weight:800">Hi ##firstname##!</span> We want to lend a helping hand. For over 86 years, Century Direct has mastered all things data and mail related.</p>
+        <br>
+        <p>From best-rate postage and product tracking, to list scrubbing and precision printing, we're here to back all your marketing efforts. After all, you can't reach your best ROI if your gorgeously printed pieces are delivered to someone no longer at that company.</p>
+        <br>
+        <p>If you're not checking all of your campaign boxes, we're in your corner ready to help increase your ROI.</p>
+        <br>
+        <div style="text-align:center;">
+          <div class="da-button" data-toggle="modal" data-target="#myModal">
+            Sign Me Up
+          </div>
+        </div>
+      </div>
+
+      <div class="services-icons">
+        <div>
+          <img id="data" data-toggle="modal" data-target="#modal-2" src="assets/images/dataGold.svg">
+          <p>
+            <label>Data</label>
+          </p>
+        </div>
+        <div>
+          <img id="digi" data-toggle="modal" data-target="#modal-2" src="assets/images/digiGold.svg">
+          <p>
+            <label>Print</label>
+          </p>
+        </div>
+        <div>
+          <img id="mail" data-toggle="modal" data-target="#modal-2" src="assets/images/mailGold.svg">
+          <p>
+            <label>Mail</label>
+          </p>
+        </div>
+        <div>
+          <img id="pack" data-toggle="modal" data-target="#modal-2" src="assets/images/packageGold.svg">
+          <p>
+            <label>Packaging</label>
+          </p>
+        </div>
+        <div>
+          <img id="hand" data-toggle="modal" data-target="#modal-2" src="assets/images/3guysGold.svg">
+          <p>
+            <label>Assembly</label>
+          </p>
+        </div>
+        <div>
+          <img id="truck" data-toggle="modal" data-target="#modal-2" src="assets/images/truckGold.svg">
+          <p>
+            <label>Tracking</label>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row footer section">
+      &copy; 2017 Century Direct | All Rights Reserved &nbsp;&nbsp;&nbsp;
+      <i class="fa fa-facebook"></i>
+      <i class="fa fa-google-plus"></i>
+      <i class="fa fa-linkedin"></i>
+      <i class="fa fa-twitter"></i>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+      
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" style="color:#c3b79a; opacity:1;">&times;</button>
+            <h4 class="modal-title" style="color:lightgray;">Please update your contact info:</h4>
+          </div>
+          <div class="modal-body">
+            <form method="post" onsubmit="return false">
+              <div class="form-group">
+                <label for="fn">First name:</label>
+                <input id="fn" class="form-control" type="text" name="firstname" value="##firstname##">
+              </div>
+              <div class="form-group">
+                <label for="ln">Last name:</label>
+                <input id="ln" class="form-control" type="text" name="lastname" value="##lastname##">
+              </div>
+              <div class="form-group">
+                <label for="co">Company:</label>
+                <input id="co" class="form-control" type="text" name="company" value="##company##">
+              </div>
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input id="email" class="form-control" type="text" name="email" value="##email##">
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone:</label>
+                <input id="phone" class="form-control" type="text" name="phone" value="##phone##">
+              </div>
+              <div class="form-group">
+                <label for="title">Title:</label>
+                <input id="title" class="form-control" type="text" name="title" value="##title##">
+              </div>
+              <div class="modal-footer">
+                <input class="da-button" type="submit" value="Submit">
+              </div>
+            </form>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="modal fade" id="modal-2" role="dialog">
+      <div class="modal-dialog">
+      
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header"></div>
+          <div class="modal-body" style="color:#c3b79a;"></div>
+        </div>
+      </div>
+    </div>
+  </div> <!-- End Bootstrap Container -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.ui.min.js"></script>
+  <script>
+    (function() {
+      var config = {
+        apiKey: "AIzaSyA8doQGd72_pTg3zws0im9kwVUFGqGUdaw",
+        authDomain: "tuneintocentury.firebaseapp.com",
+        databaseURL: "https://tuneintocentury.firebaseio.com",
+        projectId: "tuneintocentury",
+        storageBucket: "tuneintocentury.appspot.com",
+        messagingSenderId: "515938315284"
+      };
+      firebase.initializeApp(config);
+
+      var app = angular.module('app', ['firebase']);
+      app.controller('main', function($scope, $firebaseObject) {
+        var eventsRef = $firebaseObject(firebase.database().ref().child('events'));
+        firebase.database().ref().child('events/visited_landing_page/' + visitor.purl)
+          .once('value')
+          .then(function(snap) {
+            if(!snap.val()) {
+              firebase.database().ref().child('events/visited_landing_page/' + visitor.purl).set(visitor);
+            }
+            else {
+              var dates = snap.val().dates;
+              dates.push(visitor.dates[0]);
+              firebase.database().ref().child('events/visited_landing_page/' + visitor.purl + '/').update({
+                'dates': dates
+              });
+            }
+          });
+
+        $scope.viewportWidth = innerWidth;
+        $scope.viewportHeight = innerHeight;
+      });
+
+      function dazzle() {
+        for(var i = 0; i < 200; i++) {
+          var d = document.createElement('div');
+
+          if(i % 2 == 0) d.className = 'gold-dust gold-dust-1';
+          else d.className = 'gold-dust gold-dust-2';
+
+          d.style.top = Math.round(Math.random() * 20) + '%';
+          d.style.left = Math.round(Math.random() * 25) + 40 + '%';
+          $('.left').append(d);
+        }
+
+        $('.gold-dust')
+          .velocity('fadeIn', { stagger: 10 })
+          .velocity('transition.slideUpOut', { 
+            stagger: 10, 
+            complete: function() {
+              $('.gold-dust').remove();
+              dazzle();
+            }
+          });
+      }
+    
+      $(document).ready(function() {
+        $('.modal-footer').click(function(ev) {
+          $('#myModal').modal('hide');
+          $('.container-fluid, .r2').velocity('fadeOut');
+        });
+
+        $('#data').click(function() {
+          $('#modal-2 .modal-header').html('<label>Data Management</label><button type="button" class="close" data-dismiss="modal" style="color:#c3b79a; opacity:1;">&times;</button>');
+          $('#modal-2 .modal-body').html('We are SSAE 16 certified and HIPAA compliant, so your clients never have to worry about their data being compromised.');
+        });
+
+        $('#digi').click(function() {
+          $('#modal-2 .modal-header').html('<label>Digital Printing</label><button type="button" class="close" data-dismiss="modal" style="color:#c3b79a; opacity:1;">&times;</button>');
+          $('#modal-2 .modal-body').html('We have a cadre of Canon, Oce, Xerox and IBM sheetfed and web digital devices that will deliver top quality for any job.');
+        });
+
+        $('#mail').click(function() {
+          $('#modal-2 .modal-header').html('<label>Mail Services</label><button type="button" class="close" data-dismiss="modal" style="color:#c3b79a; opacity:1;">&times;</button>');
+          $('#modal-2 .modal-body').html('Our inserting machinery, equipped with read and print technology, is perfect for matching personalized enclosures to the envelopes that carries them 100% of the time. No more mismatches.');
+        });
+
+        $('#pack').click(function() {
+          $('#modal-2 .modal-header').html('<label>Packaging</label><button type="button" class="close" data-dismiss="modal" style="color:#c3b79a; opacity:1;">&times;</button>');
+          $('#modal-2 .modal-body').html('Our FDA certified packaging division can help you customize the best way to showcase your product and ensure it’s delivered on time and in good condition.');
+        });
+
+        $('#hand').click(function() {
+          $('#modal-2 .modal-header').html('<label>Hand Assembly</label><button type="button" class="close" data-dismiss="modal" style="color:#c3b79a; opacity:1;">&times;</button>');
+          $('#modal-2 .modal-body').html('Our professional assemblers know that these pieces are going to your top clients and have to be perfect every time. The unusual gets noticed and so feel free to design the unusual. We’ll put it together for you.');
+        });
+
+        $('#truck').click(function() {
+          $('#modal-2 .modal-header').html('<label>Tracking</label><button type="button" class="close" data-dismiss="modal" style="color:#c3b79a; opacity:1;">&times;</button>');
+          $('#modal-2 .modal-body').html('We’ve taken the guesswork out of the mail process with the utilization of in-house postal acceptance and the Intelligent Mail Barcode.');
+        });
+
+        $('.services-icons img').hover(function() {
+          $(this).velocity({ scaleX: [1, 1.2, 1], scaleY: [1, 1.2, 1] }, { easing: 'easeInSine', loop: true });
+        }, function() {
+          $(this).velocity('stop');
+          $(this).velocity({ scaleX: 1, scaleY: 1 });
+        });
+      });
+
+      window.onload = function() {
+        $('.splash img').velocity('transition.expandIn', 1000);
+        $('.shopping-bag').velocity('transition.flipBounceXIn', { delay: 1000 });
+        $('.rewards').velocity('transition.slideDownIn', { delay: 2000 });
+        $('body > div > div:nth-child(2) > div.col-xs-12.col-sm-8').velocity('transition.slideRightIn', { delay: 2500 });
+        $('.services-icons img').velocity('transition.bounceIn', { delay: 3000, stagger: 250 });
+        $('.services-icons label').velocity('transition.slideDownIn', { delay: 3000, stagger: 250 });
+        $('.footer').velocity('fadeIn', { delay: 3500 });
+        setTimeout(dazzle, 2500);
+      };
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en" ng-app="retailers">
+  <head>
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="http://s3.amazonaws.com/centurydirect/assets/js/app.js"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Quicksand:300,400');
+      * { font-family: 'Quicksand', arial; }
+      
+      .container-fluid {
+        background-image: url('http://s3.amazonaws.com/centurydirect/assets/images/AdobeStock_88537399_Preview.jpeg');
+        background-size: cover;
+        position: relative;
+        overflow: hidden;}
+      #nyvid {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: -1;}
+      #cdlogo {
+        margin: 25px 0;
+        max-width: 588px;
+        width: 90%;}
+      #main-text p, h2 {
+        color: #ffffff;
+        text-shadow: 1px 1px 2px #000000;}
+      p { font-size: 1.5rem; }
+      .btn.btn-warning {
+        font-size: 2rem; 
+        background-color: darkorange; 
+        border-radius: 0;
+        border: none;
+        margin: 15px;
+        padding: 15px 30px;}
+      .checkbox-inline, .checkbox-inline+.checkbox-inline { margin: 15px; }
+      #logo-container {
+        text-align:center; 
+        width:50%; 
+        margin:auto; 
+        background-color:rgba(255,255,255,0.7); }
+      #main-text {
+        width: 50%; 
+        margin: auto; 
+        background-color:rgba(0,0,0,0.7);
+        padding: 30px; }
+
+      @media screen and (max-width: 768px) {
+        #main-text {
+          width: 100%; 
+          margin: auto; 
+          background-color:rgba(0,0,0,0.7);
+          padding: 30px; }
+        #logo-container {
+          text-align: center; 
+          width: 100%; 
+          margin: auto; 
+          background-color:rgba(255,255,255,0.7); }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+
+      <div id="logo-container">
+        <img id="cdlogo" src="https://s3.amazonaws.com/centurydirect/assets/images/CenturyDirectLogoFullColor.svg">
+      </div>
+
+      <div id="main-text">
+        <p>You've got our attention now ##firstname##! We'll be in touch soon.</p>
+      </div>
+    </div>
+  </body>
+</html>    

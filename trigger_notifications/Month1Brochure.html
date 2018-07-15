@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <title>Century Direct</title>
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+    <script src="http://s3.amazonaws.com/centurydirect/node_modules/jquery/dist/jquery.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        var endpoint = "http://52.91.158.44/CenturyDirect/trigger_notifications/download.php";
+        var contact = {
+          purl: '##purl##',
+          firstname: '##firstname##',
+          lastname: '##lastname##',
+          email: '##email##',
+          title: '##title##',
+          company: '##company##',
+          address: '##address1##' + ' ' + '##city##' + ', ' + '##state##' + ' ' + '##zip##',
+          industry: '##industry##',
+          filename: 'CenturyDirect_Brochure'
+        };
+
+        $.post(endpoint, contact).done(function() {
+          location.href = "http://centurydirect.s3-website-us-east-1.amazonaws.com/assets/dl/CenturyDirect_Brochure.pdf";
+        });
+      });
+    </script>
+  </head>
+  <body>
+    
+  </body>
+</html>

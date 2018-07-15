@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>Something happened.</title>
+
+<!-- This message can display HTML, or can automatically redirect to any absolute URL, using javascript:
+
+<script type="text/javascript">
+window.location = "http://www.microsite-domain.com/your-page.html"
+</script>
+
+... or a meta refresh:
+
+    <meta http-equiv="refresh" content="0;URL='http://www.microsite-domain.com/your-page.html'"/>    
+
+Either method should be within your <head> tags.  
+
+-->
+
+</head>
+<body>
+<!-- In addition to supporting any contact variable, this page also supports a special variable: ##error##, which is a system-generated description of the error.-->
+Oops! I'm sorry ##firstname default="Sir/Madam"##, something went wrong! Please contact the site administrator. The following error has occurred: <span id="err">##error##</span>
+
+<script>
+  var err = document.querySelector('#err').innerHTML;
+
+  if(err.search(/de\-dupe/gi) != -1) {
+    alert("That email address already exists in the database. Please use an alternate email address.");
+  }
+</script>
+</body>
+</html>

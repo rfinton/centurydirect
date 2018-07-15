@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+		<meta http-equiv="pragma" content="no-cache">
+		<meta http-equiv="cache-control" content="no-cache">
+		<title>Century Direct</title>
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+		<link rel="stylesheet" href="http://s3.amazonaws.com/centurydirect/node_modules/bootstrap/dist/css/bootstrap.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://s3.amazonaws.com/centurydirect/assets/css/styleM3.css">
+  </head>
+  
+  <body>
+    <img id="logo" src="http://s3.amazonaws.com/centurydirect/assets/images/CenturyDirectLogoFullColor.svg">
+    <img class="bg" id="healthcare-bg" src="http://s3.amazonaws.com/centurydirect/assets/images/bgM3LpHealthWeb.jpg" alt="">
+    <img class="bg" id="finance-bg" src="http://s3.amazonaws.com/centurydirect/assets/images/bgM3LpFinancialWeb.jpg" alt="">
+    <img class="bg" id="customer-bg" src="http://s3.amazonaws.com/centurydirect/assets/images/bgM3LpCustomerWeb.jpg" alt="">
+
+    <div id="content" style="background:#DF7C3B;">
+      <p id="text">
+        <strong>##firstname##,</strong><br>With the newest printing and mailing technology from Century Direct, you can cut through all the clutter and speak directly to your customers with their information.<br><strong>ATTENTION GRABBING AND TRACKABLE!</strong><br>Think about it ##firstname##, if you were to hand a violinist a score of music written for a cello, they would have no use for it. Relevancy and personalization to your customer is music to their ears.<br><strong>The envelopes shown are just a few examples of how you could use this product.</strong><br><br>Find out how Century Shape Cut Envelopes can be used to get attention, better response and deliverability.
+      </p>
+
+      <form method="post" role="form">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6">
+            <div class="form-group">
+              <label for="fn">First name</label>
+              <input id="fn" class="form-control" type="text" value="##firstname##" name="firstname">
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6">
+            <div class="form-group">
+              <label for="ln">Last name</label>
+              <input id="ln" class="form-control" type="text" value="##lastname##" name="lastname">
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input id="email" class="form-control" type="text" value="##email##" name="email">
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6" style="text-align:center; margin-top:15px;">
+            <input class="btn btn-default" type="submit" value="Submit">
+          </div>
+        </div>
+      </form>
+    </div>
+
+
+    <div class="envelopes">
+      <img class="cust-image" src="http://s3.amazonaws.com/centurydirect/assets/images/postitEnvelope03Cust.png" alt="">
+      <img class="cust-image" src="http://s3.amazonaws.com/centurydirect/assets/images/postitEnvelope04Cust.png" alt="">
+      <img class="cust-image" src="http://s3.amazonaws.com/centurydirect/assets/images/postitEnvelope05Cust.png" alt="">
+
+      <img class="health-image" src="http://s3.amazonaws.com/centurydirect/assets/images/postitEnvelope03Health.png" alt="">
+      <img class="health-image" src="http://s3.amazonaws.com/centurydirect/assets/images/postitEnvelope04Health.png" alt="">
+      <img class="health-image" src="http://s3.amazonaws.com/centurydirect/assets/images/postitEnvelope05Health.png" alt="">
+
+      <img class="finance-image" src="http://s3.amazonaws.com/centurydirect/assets/images/postitEnvelope03Finance.png" alt="">
+      <img class="finance-image" src="http://s3.amazonaws.com/centurydirect/assets/images/postitEnvelope04Finance.png" alt="">
+      <img class="finance-image" src="http://s3.amazonaws.com/centurydirect/assets/images/postitEnvelope05Finance.png" alt="">
+    </div>
+    
+    <script>
+      var contact = {
+				purl: '##purl##',
+				firstname: '##firstname##',
+				lastname: '##lastname##',
+				title: '##title##',
+				company: '##company##',
+				address: '##address1## ##city##, ##state## ##zip##',
+				industry: '##industry##',
+				list: '##list##',
+        page: 'Month3 LP',
+        origin: ''
+      };
+      
+      var visitedPageCount = ##goalcount Context="Any Visit" ProgramId="1" CampaignId="1" InboundId="1" InboundDetailId="10" Goal="13" From="1/5/18 2:25:45 PM -06:00" To="1/5/19 12:00:00 AM -06:00" ##;
+    </script>
+    <script src="http://s3.amazonaws.com/centurydirect/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="http://s3.amazonaws.com/centurydirect/assets/js/m3-view.js"></script>
+  </body>
+</html>

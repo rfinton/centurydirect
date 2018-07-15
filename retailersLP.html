@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en" ng-app="retailers">
+  <head>
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="http://s3.amazonaws.com/centurydirect/assets/js/app.js"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Quicksand:300,400');
+      * { font-family: 'Quicksand', arial; }
+      
+      .container-fluid {
+        background-image: url('http://s3.amazonaws.com/centurydirect/assets/images/AdobeStock_1580390_Preview.jpeg');
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        overflow: hidden; }
+      #nyvid {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: -1; }
+      #cdlogo {
+        margin: 25px 0;
+        max-width: 588px;
+        width: 90%; }
+      #main-text p, h2 {
+        color: #ffffff;
+        text-shadow: 1px 1px 2px #000000; }
+      p { font-size: 1.5rem; }
+      h2 { margin-top: 0; }
+      .btn.btn-warning {
+        font-size: 2rem; 
+        background-color: darkorange; 
+        border-radius: 0;
+        border: none;
+        margin: 15px;
+        padding: 15px 30px; }
+      .checkbox-inline, .checkbox-inline+.checkbox-inline { 
+        margin: 15px; }
+      .input-group {
+        display: none; }
+      #logo-container {
+        text-align:center; 
+        width:50%; 
+        margin:auto; 
+        background-color:rgba(255,255,255,0.7); }
+      #main-text {
+        width: 50%; 
+        margin: auto; 
+        background-color:rgba(0,0,0,0.7);
+        padding: 15px 30px; }
+
+      @media screen and (max-width: 768px) {
+        #main-text {
+          width: 100%; 
+          margin: auto; 
+          background-color:rgba(0,0,0,0.7);
+          padding: 30px; }
+        #logo-container {
+          text-align: center; 
+          width: 100%; 
+          margin: auto; 
+          background-color:rgba(255,255,255,0.7); }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid" ng-controller="hfill">
+      <div id="logo-container">
+        <img id="cdlogo" src="https://s3.amazonaws.com/centurydirect/assets/images/CenturyDirectLogoFullColor.svg">
+      </div>
+
+      <div id="main-text">
+        <h2>##firstname##,<br>Are you getting their attention?</h2>
+        <p>If your brand doesn't make an impression within the first 8 seconds you could lose your audience. Century Direct offers a broad range of services to help your brand remain in the forefront of their mind.</p>
+        <p>We're smart and easy to work with. It's the way we put it all together that sets us apart.</p>
+        <p>Click the button below to learn more about how we can help you.</p>
+        <div style="text-align:center;">
+          <button class="btn btn-warning" data-toggle="modal" data-target="#modal-1">Learn More</button>
+        </div>
+      </div>
+
+      <form method="post">
+        <!-- Modal 1 -->
+        <div id="modal-1" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+    
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Groovy!</h4>
+              </div>
+              <div class="modal-body">
+                <p>Please select the services that interest you the most.</p>
+                <label class="checkbox-inline">
+                  <input type="checkbox" value="">Option 1
+                </label>
+                <label class="checkbox-inline">
+                  <input type="checkbox" value="">Option 2
+                </label>
+                <label class="checkbox-inline">
+                  <input type="checkbox" value="">Option 3
+                </label>
+                <label class="checkbox-inline">
+                  <input type="checkbox" value="">Option 4
+                </label>
+                <label class="checkbox-inline">
+                  <input type="checkbox" value="">Option 5
+                </label>
+                <label class="checkbox-inline">
+                  <input type="checkbox" value="">Option 6
+                </label>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" data-target="#modal-2">Next</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal 2 -->
+        <div id="modal-2" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+    
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Great!</h4>
+              </div>
+              <div class="modal-body">
+                <p>How would you like us to contact you?</p>
+                <label class="checkbox-inline">
+                  <input id="email" type="checkbox" value="">Email
+                </label>
+                <label class="checkbox-inline">
+                  <input id="phone" type="checkbox" value="">Phone
+                </label>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                  <input type="text" class="form-control" name="email" value="##email##" placeholder="Email">
+                </div>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
+                  <input class="form-control" name="phone" value="##phone##" placeholder="Phone">
+                </div>
+              </div>
+              <div class="modal-footer">
+                <input type="submit" class="btn btn-default" value="Submit">
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+
+    </div>
+  </body>
+</html>    

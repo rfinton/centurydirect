@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,700');
+* { font-family: 'Quicksand', arial; }
+
+body {
+  background-color: #000000; }
+
+.container-fluid {
+  position: relative;
+  overflow: hidden; }
+
+#bg-video {
+  width: 100%;
+  position: fixed;
+  z-index: 0;
+  top: 0;
+  left: 0; 
+  opacity: 0.3; }
+
+#cdlogo {
+  background-color: rgba(255, 255,255, 0.5);
+  padding: 15px 0;
+  text-align: center;}
+#cdlogo img {
+  width: 90%;
+  max-width: 480px;}
+
+.col-left { 
+  padding-top: 30px;
+  color: #ffffff; }
+.col-left > #dh2p { display: none; }
+.col-left img {
+  min-width: 80px;
+  min-height: 80px;
+  max-width: 80px;
+  max-height: 80px;
+  width: 80px;
+  height: 80px; }
+.col-left .velocity-icon { 
+  opacity: 0;
+  cursor: pointer; }
+.col-left .velocity-icon label { cursor: pointer; }
+.col-left .icon { 
+  display: flex;
+  flex: 1;
+  justify-content: flex-start; 
+  align-items: flex-start; 
+  margin: 12px 0; 
+  padding-bottom: 12px;
+  border-bottom: solid 1px #ffffff; }
+.col-left .icon > p {
+  line-height: 1.2;
+  margin-left: 12px; }
+.col-left .icon label {
+  display: block;
+  padding-bottom: 8px;
+  color: #e47b3e;
+  text-decoration: underline;
+  font-size: 1.2em; }
+.col-left .about { 
+  font-size: 0.8em;
+  display: inline; }
+
+.col-right { 
+  padding-top: 60px;
+  text-align: center; }
+.col-right > div { 
+  display: block; 
+  padding: 0 12%;
+  margin-bottom: 60px;
+  color: #ffffff; }
+.col-right p { margin: 30px 0; }
+
+.learn-more {
+  color: #ffffff;
+  font-size: 1em;
+  margin: 60px 0;
+  padding: 12px 24px;
+  background-color: #e47b3e; }
+
+.learn-more:hover {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: orange;}
+.learn-more:focus {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: orange;}
+
+.modal-title {
+  margin: 15px;}
+
+.footer {
+  vertical-align: center;
+  color: #000000; }
+.footer > div.rights {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 30px 0; }
+.footer.thanks {
+  position: absolute;
+  bottom: 0;
+  left: 15px;
+  width: 100%;
+}
+
+.side-widget {
+  display: inline-block;
+  position: fixed;
+  top: 10%;
+  right: 0;
+  font-size: 20px;
+  padding: 12px;
+  background-color: #1c3664;
+  color: #ffffff; }
+.side-widget i { clear: both; }
+.bottom-widget {
+  font-size: 1.3em;
+  padding: 12px;
+  background-color: #1c3664;
+  color: #ffffff;
+  display: none; }
+.side-widget a, .bottom-widget a { color: #ffffff; }
+.bottom-widget > div { text-align: center; }
+
+.middle { margin: 16vh auto 0; width: 50%; }
+
+.tagline {
+  margin: 6% 0;
+  text-align:center; 
+  color:#ffffff;}
+
+.container-fluid .jumbotron {
+  padding: 15px 30px 48px;
+  background-color: rgba(0,0,0,0.5);
+  color: #ffffff;
+  border: solid 1px #ffffff;}
+.jumbotron .page-header {
+  display: flex;
+  align-items: center;}
+.jumbotron .page-header img {
+  flex: none;
+  width: 80px;
+  height: 80px;}
+
+.row.section {
+  text-align: center;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 6% 0;}
+
+.row.call-to-action {
+  text-align: center;
+  padding: 6% 0;}
+
+.social {
+  text-align: center;
+  color: #ffffff;}
+.social i {
+  margin: 0 12px;}
+
+.footer {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  background-color: rgba(255,255,255,0.5);
+  text-align: center;
+  font-size: 70%;
+  color: #000000;}
+.footer img {
+  flex: none;
+  width: auto;
+  height: 40px;}
+.footer .break {display: none;}
+
+
+@media screen and (max-width: 414px) {
+  #bg-video { left: -100%; }
+  #cdlogo { position: initial; }
+  .middle { display: block; height: initial; padding: 15px; }
+  .col-left > #dh2p { display: block; }
+  .col-left #dh2p p { margin: 30px 0; }
+  .col-right { text-align: center; padding-bottom: 60px; }
+  .col-right > div { display: none; }
+  .footer, .footer.thanks { position: initial; display: block; width: initial; }
+  .side-widget { display: none; }
+  .bottom-widget { display: block; }
+  .middle { width: 100%; margin: 0 auto; }
+}

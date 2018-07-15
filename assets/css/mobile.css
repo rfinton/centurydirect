@@ -1,0 +1,36 @@
+@media screen and (max-width: 800px) {
+  .company-logo {
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;}
+  .text, label {
+    font-size: 12pt;}
+  .text {
+    margin: 0 auto;}
+  .text p {
+    margin: 15% 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 18pt;}
+  .stage-2 {
+    width: 85%;
+    padding-bottom: 20%;}
+  .bullet {
+    display: none;}
+  .card {
+    padding: 0;}
+  .hands {
+    display: none !important;}
+  .note {
+    width: 100%;
+    margin-top: 100px;}
+
+  /* ============================= */
+  /*        Thank You page         */
+  /* ============================= */
+
+  .note.thanks {
+    margin: 15% 0;}
+  .text.thanks {
+    margin: 50% 0;}
+}

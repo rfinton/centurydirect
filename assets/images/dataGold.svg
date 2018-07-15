@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 39.6 39.6" width="39.6" height="39.6" style="enable-background:new 0 0 39.6 39.6;" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradient-0" gradientUnits="userSpaceOnUse" x1="19.8" y1="1.8" x2="19.8" y2="37.8">
+      <stop offset="0" style="stop-color: rgba(233, 218, 182, 1)"/>
+      <stop offset="1" style="stop-color: rgb(192, 146, 7);"/>
+    </linearGradient>
+    <style type="text/css">
+	.st0{fill:#FFFFFF;}
+</style>
+  </defs>
+  <g id="Layer_4"/>
+  <g id="Layer_1"/>
+  <g id="Layer_3"/>
+  <g id="Layer_2">
+    <path class="st0" d="M19.8,1.8c-9.9,0-18,8.1-18,18s8.1,18,18,18s18-8.1,18-18S29.7,1.8,19.8,1.8z M29,28c0,0-1.2,2.1-9.2,2.1 c-7.9,0-8.8-2.3-8.8-2.3l0-4.2c0,0,1.5,2,8.9,1.9c7.5-0.1,9.2-1.9,9.2-1.9V28z M29,22.5c0,0-1.2,2.1-9.2,2.1 c-7.9,0-8.8-2.3-8.8-2.3l0-4.2c0,0,1.5,2,8.9,1.9c7.5-0.1,9.2-1.9,9.2-1.9V22.5z M29,17.2c0,0-1.2,2.1-9.2,2.1 C11.9,19.2,11,17,11,17l0-4.2c0,0,1.5,2,8.9,1.9c7.5-0.1,9.2-1.9,9.2-1.9V17.2z M20,14c-5,0-9.1-1.1-9.1-2.5S14.9,9,20,9 s9.1,1.1,9.1,2.5S25,14,20,14z" style="fill: url(#gradient-0);"/>
+  </g>
+</svg>

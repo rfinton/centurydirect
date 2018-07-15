@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta http-equiv="pragma" content="no-cache">
+		<meta http-equiv="cache-control" content="no-cache">
+		<title>Century Direct</title>
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+		<link rel="stylesheet" href="//s3.amazonaws.com/centurydirect/node_modules/bootstrap/dist/css/bootstrap.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="//s3.amazonaws.com/centurydirect/assets/css/style.css">
+		<link rel="stylesheet" href="//s3.amazonaws.com/centurydirect/assets/css/formstyle.css">
+		<link rel="stylesheet" href="//s3.amazonaws.com/centurydirect/assets/css/mobile.css">
+	</head>
+
+	<body>
+		<div class="hands">
+			<img width="420" src="//s3.amazonaws.com/centurydirect/assets/images/hands.png">
+		</div>
+
+		<div class="container-main">
+			<div id="gradient-left">
+				<svg xmlns="http://www.w3.org/2000/svg">
+					<defs>
+						<linearGradient id="gradient" x1="0%" x2="100%" y1="0%" y2="0%">
+							<stop offset="0%" style="stop-color:rgb(150,150,150);stop-opacity:1" />
+							<stop offset="100%" style="stop-color:rgb(255,255,255);stop-opacity:0" />
+						</linearGradient>
+					</defs>
+					<rect fill="url(#gradient)" x="0" y="0"/>
+				</svg>
+			</div>
+	
+			<div id="gradient-right">
+				<svg xmlns="http://www.w3.org/2000/svg">
+					<defs>
+						<linearGradient id="gradient"  x1="0%" x2="100%" y1="0%" y2="0%">
+								<stop offset="0%" style="stop-color:rgb(150,150,150);stop-opacity:1" />
+								<stop offset="100%" style="stop-color:rgb(255,255,255);stop-opacity:0" />
+						</linearGradient>
+					</defs>
+					<rect fill="url(#gradient)" x="0" y="0"/>
+				</svg>
+			</div>
+
+			<div class="text">
+				<!--
+				<p>Hi ##firstname##,</p>
+				<p>It starts with a single note.</p>
+				<p>A note that is the beginning of a masterpiece.</p>
+	
+				<div id="headphone">
+					<button id="begin" class="btn btn-info">Begin</button>
+				</div>
+				/-->
+				<div class="note">
+					<img id="note" style="width:100%;" src="//s3.amazonaws.com/centurydirect/assets/images/colorfulMusic.png">
+				</div>
+
+				<div class="stage-2">
+					<div style="text-align:center; margin-bottom:30px;">
+						<h3 style="font-size:130%;">##firstname##,</h3>
+						<span id="plugin">Go ahead, plug those buds in.<br></span>
+						We've got something exciting for you!
+					</div>
+		
+					<div style="margin-bottom:30px;">
+						Direct Mail marketing is one of the top lines of communication in the <span class="industry"></span> world, but if poor data meets poor printing, even the most eye-catching designs and notes can lead to a poor finale.<br>
+						<br>
+						Century Direct knows the importance of data security and being <span class="compliance"></span> compliant, which is why we work closely with clients to create bottom-line results using secure interfaces.<br>
+						<br>
+						Let us share our expertise with ##company##. Better targeting, better reporting, better security. That's what we do.
+					</div>
+		
+					<form method="post">
+						<div class="row">
+							<div id="checkboxes" class="col-xs-12 col-sm-6">
+								<div style="text-align:center; color:#e47b3e; font-weight:bold; font-style:italic;">
+									<b>Please tell us what you currently outsource <span class="gift"></span></b>
+								</div>
+	
+								<div class="checkbox checkbox-info">
+									<input id="checkbox1" type="checkbox" name="form_resp1" value="data mgmt">
+									<label for="checkbox1">Data Management</label>
+								</div>
+	
+								<div class="checkbox checkbox-info">
+									<input id="checkbox2" type="checkbox" name="form_resp1" value="digital print">
+									<label for="checkbox2">Digital Printing</label>
+								</div>
+	
+								<div class="checkbox checkbox-info">
+									<input id="checkbox3" type="checkbox" name="form_resp1" value="addressing - inserting">
+									<label for="checkbox3">Addressing &amp; Inserting</label>
+								</div>
+	
+								<div class="checkbox checkbox-info">
+									<input id="checkbox4" type="checkbox" name="form_resp1" value="hand assembly">
+									<label for="checkbox4">Hand Assembly</label>
+								</div>
+	
+								<div class="checkbox checkbox-info">
+									<input id="checkbox5" type="checkbox" name="form_resp1" value="packaging">
+									<label for="checkbox5">Packaging</label>
+								</div>
+	
+								<div class="checkbox checkbox-info">
+									<input id="checkbox6" type="checkbox" name="form_resp1" value="offset print - bindery">
+									<label for="checkbox6">Offset Printing and Full Bindery</label>
+								</div>
+	
+								<div class="checkbox checkbox-info">
+									<input id="checkbox7" type="checkbox" name="form_resp1" value="mail - imb tracking">
+									<label for="checkbox7">Mail Services and Intelligent Mail Tracking</label>
+								</div>
+							</div>
+						
+							<div id="contact-info" class="col-xs-12 col-sm-6">
+								<div class="form-group">
+									<label for="fn">Firstname:</label>
+									<input type="text" name="firstname" id="fn" class="form-control" value="##firstname##">
+								</div>
+							
+								<div class="form-group">
+									<label for="ln">Lastname:</label>
+									<input type="text" name="lastname" id="ln" class="form-control" value="##lastname##">
+								</div>
+									
+								<div class="form-group">
+									<label for="email">Email:</label>
+									<input type="text" name="email" id="email" class="form-control" value="##email##">
+								</div>
+
+								<div class="form-group">
+									<label for="instrument">We care about how you fit into the orchestra. Which instrument would you choose to play?</label>
+									<select class="form-control" id="instrument" name="instrument">
+										<option value="violin">Violin</option>
+										<option value="cello">Cello</option>
+										<option value="bass">Bass</option>
+										<option value="drums">Drums</option>
+										<option value="piano">Piano</option>
+										<option value="trumpet">Trumpet</option>
+										<option value="clarinet">Clarinet</option>
+									</select>
+								</div>
+							
+								<div class="card">
+									<input type="submit" class="btn btn-info card" value="Send me my $5 iTunes gift card">
+								</div>
+	
+							</div>
+						</div>
+					</form>
+				</div>
+
+				<div class="page-footer">
+					<div class="footer-info">&copy; 2017 Century Direct</div>
+					<div class="bullet">&bull;</div>
+					<div class="footer-info"><i class="fa fa-map-marker"></i> 
+						&nbsp; 15 Enter Lane, Islandia, NY 11749
+					</div>
+					<div class="bullet">&bull;</div>
+					<div class="footer-info"><i class="fa fa-phone"></i> &nbsp; 212-763-0600</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="company-logo">
+			<img width="300" src="//s3.amazonaws.com/centurydirect/assets/images/CenturyDirectLogoFullColor.svg">
+			<br>
+			<span class="tagline">The way we put it all together is what</span> 
+			<span style="white-space:nowrap;">sets us apart</span>
+			<span class="log"></span>
+		</div>
+
+		
+
+		<div class="screen-filter">
+			<div class="data-required">
+				<span id="msg"></span><br/>
+				<button id="close-message" class="btn btn-default">Ok</button>
+			</div>
+
+			<div class="loader-icon">
+				<img src="//s3.amazonaws.com/centurydirect/assets/images/Vector_Loading.svg" alt="loading...">
+			</div>
+		</div>
+
+		<noscript style="width:100%; height:3000px; background:#000; color:#fff; font-size:18pt; position:absolute; top:0; left:0; z-index:10;">
+			<div style="padding-top:3em; width:60%; margin:auto;">If you are seeing this message it means your browser is blocking javascript. This site requires javascript to be enabled to display correctly.</div>
+		</noscript>
+
+		<script>
+			var contact = {
+				purl: '##purl##',
+				firstname: '##firstname##',
+				lastname: '##lastname##',
+				title: '##title##',
+				company: '##company##',
+				address: '##address1## ##city##, ##state## ##zip##',
+				industry: '##industry##',
+				list: '##list##',
+				page: 'Month1 LP'
+			};
+		</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.ui.min.js"></script>
+		<script src="//s3.amazonaws.com/centurydirect/assets/js/controller.js"></script>
+		<script src="//s3.amazonaws.com/centurydirect/assets/js/animations.js"></script>
+	</body>
+</html>

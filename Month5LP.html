@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/month5.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.ui.min.js"></script>
+    <script>
+      function reveal(s) {
+        $(s).velocity('transition.slideLeftIn');
+      }
+
+      var url = 'http://52.91.158.44/CenturyDirect/trigger_notifications/visited.php';
+      var href = location.href;
+      var begin = href.search('month5');
+      var end = href.search('&');
+      var isseed = false;
+      var contact = {
+				purl: 'RayFinton',
+				firstname: '##firstname##',
+				lastname: '##lastname##',
+				title: '##title##',
+				company: '##company##',
+				address: '##address1## ##city##, ##state## ##zip##',
+				industry: '##industry##',
+				list: '##list##',
+        page: 'Month5 LP',
+        origin: href.slice(begin, end)
+      };
+
+      if(contact.purl != "" && contact.purl != 'RayFinton') $.post(url, contact);
+    </script>
+  </head>
+  <body>
+    <video id="bg-video" preload="auto" autoplay loop muted poster="http://s3.amazonaws.com/centurydirect/assets/video/social-poster.jpg">
+      <source src="https://s3.amazonaws.com/centurydirect/assets/video/social.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    
+    <div class="container-fluid">
+      <div id="cdlogo" class="row">
+        <img src="https://s3.amazonaws.com/centurydirect/assets/images/CenturyDirectLogoFullColor.svg">
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-5 col-left">
+          <div id="dh2p">
+            <h2>It's the way we put it all together that sets us apart.</h2>
+            <p>At Century Direct, we are known for so much more than just our printing capabilities. We also manage the security and integrity of your data so you can sleep comfortably at night knowing your data is safe with us.</p>
+          </div>
+
+          <div class="velocity-icon" id="data" data-toggle="modal" data-target="#myModal">
+            <div class="icon">
+              <img onload="reveal('#data')" src="https://s3.amazonaws.com/centurydirect/assets/images/dataWhite.svg">
+              <p>
+                <label>Data Management</label>
+                <i class="about">Better targeting to the right customers, better personalized messaging, better postal discounting, better reporting, better security.</i>
+              </p>
+            </div>
+          </div>
+
+          <div class="velocity-icon" id="digital" data-toggle="modal" data-target="#myModal">
+            <div class="icon">
+              <img onload="reveal('#digital')" src="https://s3.amazonaws.com/centurydirect/assets/images/digiWhite.svg">
+              <p>
+                <label>Digital Printing</label>
+                <i class="about">The right creative message will really pop if it is printed on quality equipment.</i>
+              </p>
+            </div>
+          </div>
+
+          <div class="velocity-icon" id="mail" data-toggle="modal" data-target="#myModal">
+            <div class="icon">
+              <img onload="reveal('#mail')" src="https://s3.amazonaws.com/centurydirect/assets/images/truckWhite.svg">
+              <p>
+                <label>Mail Services and Intelligent Mail Tracking</label>
+                <i class="about">We can track your project as it travels through the postal system and provide an electronic tracking report to help you coordinate other marketing efforts with the mail.</i>
+              </p>
+            </div>
+          </div>
+
+          <div class="velocity-icon" id="hand" data-toggle="modal" data-target="#myModal">
+            <div class="icon">
+              <img onload="reveal('#hand')" src="https://s3.amazonaws.com/centurydirect/assets/images/3guysWhite.svg" alt="Hand-Assembly">
+              <p>
+                <label>Hand Assembly</label>
+                <i class="about">For those one-of-a-kind projects that require a more personal touch.</i>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-7 col-right">
+          <div>
+            <h2>It's the way we put it all together that sets us apart.</h2>
+            <p>##var-text##</p>
+          </div>
+          <a class="learn-more" href="#" data-toggle="modal" data-target="#myModal">Learn More</a>
+        </div>
+      </div>
+      
+      <!-- Modal -->
+      <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">We're here to help you ##firstname##.<br>Submit the form below and we'll be in touch.</h4>
+            </div>
+
+            <form method="post" onsubmit="return false;">
+              <div class="modal-body">
+                <div class="form-group">
+                  <label for="fn">First name</label>
+                  <input type="text" class="form-control" id="fn" name="firstname" value="##firstname##" required>
+                </div>
+                <div class="form-group">
+                  <label for="ln">Last name</label>
+                  <input type="text" class="form-control" id="ln" name="lastname" value="##lastname##" required>
+                </div>
+                <div class="form-group">
+                  <label for="company">Company</label>
+                  <input type="text" class="form-control" id="company" name="company" value="##company##" required>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="text" class="form-control" id="email" name="email" value="##email##" required>
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone</label>
+                  <input type="text" class="form-control" id="phone" name="phone" value="##phone##">
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button id="submit" class="btn btn-default">Submit</button>
+              </div>
+              <div class="hidden services">
+                <input type="checkbox" value="Data-Management" name="M5form">
+                <input type="checkbox" value="Digital-Printing" name="M5form">
+                <input type="checkbox" value="Mailing-Services" name="M5form">
+                <input type="checkbox" value="Hand-Assembly" name="M5form">
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="row footer">
+        <div class="rights col-xs-12">
+          © 2017 Century Direct | All Rights Reserved
+        </div>
+        <div class="bottom-widget col-xs-12">
+          <div class="col-xs-3">
+            <a href="https://www.facebook.com/Century-Direct-1916591905289628" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+          </div>
+          <div class="col-xs-3">
+            <a href="https://plus.google.com/u/0/111013546613501477825" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+          </div>
+          <div class="col-xs-3">
+            <a href="https://twitter.com/DirectCentury" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+          </div>
+          <div class="col-xs-3">
+            <a href="https://www.linkedin.com/company-beta/11199293" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+          </div>
+        </div>    
+      </div>
+
+      <div class="side-widget">
+        <a href="https://www.facebook.com/Century-Direct-1916591905289628" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a><br>
+        <a href="https://plus.google.com/u/0/111013546613501477825" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a><br>
+        <a href="https://twitter.com/DirectCentury" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a><br>
+        <a href="https://www.linkedin.com/company-beta/11199293" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+      </div>
+      
+    </div> <!-- End of Bootstrap Container -->
+    
+    <script src="assets/js/month5.js"></script>
+  </body>
+</html>

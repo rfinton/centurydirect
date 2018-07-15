@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="http://s3.amazonaws.com/centurydirect/assets/css/m4style.css" rel="stylesheet">
+    <style>
+      .container-fluid {
+        background-image: url(http://s3.amazonaws.com/centurydirect/assets/images/bridge-3081511_1280.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;}
+      .footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;}
+    </style>
+    <script>
+      var industry = "##industry##";
+      var fn = "##firstname##";
+      var softLoad = function() {
+        document.body.classList.add('transition-1');
+      };
+    </script>
+  </head>
+  <body onload="softLoad()">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6">
+          <div class="jumbotron" style="text-align:center; background-color: rgba(175, 169, 182, 0.7)">
+            <img src="http://s3.amazonaws.com/centurydirect/assets/images/CenturyDirectLogoFullColor.svg">
+            <p class="lead">It's the way we put it all together that sets us apart.</p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6"></div>
+      </div>
+
+      <div class="row" style="text-align:center;">
+        <p style="color:#ffffff; max-width:640px; margin:auto;" class="lead">Thanks ##firstname##. You're samples should arrive within 2-3 business days. If you have any questions, please feel free to call us at the number below. Our representatives are here to assist you.</p>
+      </div>
+      
+      <div class="row footer">
+        <div class="col-xs-12 col-sm-6">
+          Century Direct &bullet; 15 Enter Lane, Islandia, NY 11749 &bullet; 212-763-0600
+        </div>
+        <div class="col-xs-12 col-sm-6">
+          <img src="http://s3.amazonaws.com/centurydirect/assets/images/FDA-approved-logo_blue11.png">
+          <img src="http://s3.amazonaws.com/centurydirect/assets/images/hipaa_blue.png">
+          <img src="http://s3.amazonaws.com/centurydirect/assets/images/ssae.png">
+          &copy; 2017 Century Direct | All Rights Reserved
+        </div>
+      </div>
+    </div>
+
+    <div class="social">
+      <i class="fa fa-facebook"></i>
+      <i class="fa fa-google-plus"></i>
+      <i class="fa fa-linkedin"></i>
+      <i class="fa fa-twitter"></i>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://s3.amazonaws.com/centurydirect/assets/js/m4vars.js"></script>
+    <script src="http://s3.amazonaws.com/centurydirect/assets/js/m4script.js"></script>
+    <script>
+      var url = 'http://52.91.158.44/CenturyDirect/trigger_notifications/submit.php';
+      var isseed = ##isseed##;
+      var contact = {
+				purl: '##purl##',
+				firstname: '##firstname##',
+        lastname: '##lastname##',
+        email: '##email##',
+        phone: '##phone##',
+				title: '##title##',
+				company: '##company##',
+				address: '##address1## ##city##, ##state## ##zip##',
+				industry: '##industry##',
+				list: '##list##',
+        page: 'Month4 LP',
+        form_response: 'Requested print samples'
+      };
+
+      if(contact.purl != "" && !isseed) $.post(url, contact);
+    </script>
+  </body>
+</html>
