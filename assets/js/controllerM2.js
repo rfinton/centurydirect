@@ -10,14 +10,14 @@ $(document).ready(function() {
     if(location.href.search(/thanks/g) == -1) {
       if(visitedPageCount == 1) {
         var url = 'http://52.91.158.44/CenturyDirect/trigger_notifications/visited.php';
-        $.post(url, contact);
+        //$.post(url, contact);
       }
     }
     
     // trigger notification for contact submitted form data
     if(location.href.search(/thanks/g) != -1) {
       var url = "http://52.91.158.44/CenturyDirect/trigger_notifications/submit.php";
-      $.post(url, contact);
+      //$.post(url, contact);
     }
   } catch(err) {
     console.log(err);
