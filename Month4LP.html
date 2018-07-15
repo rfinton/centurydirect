@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="http://s3.amazonaws.com/centurydirect/assets/css/m4style.css" rel="stylesheet">
+    <link href="assets/css/m4style.css" rel="stylesheet">
     <script>
       var industry = "##industry##";
       var fn = "##firstname##";
@@ -55,7 +55,7 @@
       <div class="row bridge">
         <div class="col-xs-12 col-sm-6 verticalAlignCenter">
           <div class="jumbotron" style="text-align:center;">
-            <img src="http://s3.amazonaws.com/centurydirect/assets/images/CenturyDirectLogoFullColor.svg">
+            <img src="https://s3.amazonaws.com/centurydirect/assets/images/CenturyDirectLogoFullColor.svg">
             <p class="lead">It's the way we put it all together that sets us apart.</p>
           </div>
         </div>
@@ -99,9 +99,9 @@
           Century Direct &bullet; 15 Enter Lane, Islandia, NY 11749 &bullet; 212-763-0600
         </div>
         <div class="col-xs-12 col-sm-6">
-          <img src="http://s3.amazonaws.com/centurydirect/assets/images/FDA-approved-logo_blue11.png">
-          <img src="http://s3.amazonaws.com/centurydirect/assets/images/hipaa_blue.png">
-          <img src="http://s3.amazonaws.com/centurydirect/assets/images/ssae.png">
+          <img src="https://s3.amazonaws.com/centurydirect/assets/images/FDA-approved-logo_blue11.png">
+          <img src="https://s3.amazonaws.com/centurydirect/assets/images/hipaa_blue.png">
+          <img src="https://s3.amazonaws.com/centurydirect/assets/images/ssae.png">
           &copy; 2017 Century Direct | All Rights Reserved
         </div>
       </div>
@@ -115,16 +115,16 @@
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="http://s3.amazonaws.com/centurydirect/assets/js/m4vars.js"></script>
-    <script src="http://s3.amazonaws.com/centurydirect/assets/js/m4script.js"></script>
+    <script src="assets/js/m4vars.js"></script>
+    <script src="assets/js/m4script.js"></script>
     <script>
       var url = 'http://52.91.158.44/CenturyDirect/trigger_notifications/visited.php';
       var href = location.href;
       var begin = href.search('month');
       var end = href.search('&');
-      var isseed = ##isseed##;
+      var isseed = false;
       var contact = {
-				purl: '##purl##',
+				purl: 'RayFinton',
 				firstname: '##firstname##',
 				lastname: '##lastname##',
 				title: '##title##',
@@ -138,7 +138,7 @@
 
       if(contact.purl != "") $('#purlGreet').show();
       else $('#gurlGreet').show();
-      if(contact.purl != "" && !isseed) $.post(url, contact);
+      //if(contact.purl != "" && !isseed) $.post(url, contact);
     </script>
   </body>
 </html>
