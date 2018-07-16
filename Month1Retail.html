@@ -131,7 +131,7 @@
       <div class="col-xs-12 col-sm-8">
         <p><span style="font-weight:800">Hi ##firstname##!</span> We want to lend a helping hand. For over 86 years, Century Direct has mastered all things data and mail related.</p>
         <p>From best-rate postage and product tracking, to list scrubbing and precision printing, we're here to back all your marketing efforts. After all, you can't reach your best ROI if your gorgeously printed pieces are delivered to someone no longer at that company.</p>
-        <p>If you're not checking all of your campaign boxes, we're in your corner ready to help increase your ROI.</p>
+        <p>If you're not checking all of your campaign boxes at ##company##, we're in your corner ready to help increase your ROI.</p>
         <div style="text-align:center;">
           <div class="da-button" data-toggle="modal" data-target="#myModal">
             Sign Me Up
@@ -174,6 +174,12 @@
           <img id="truck" data-toggle="modal" data-target="#modal-2" src="assets/images/truckGold.svg">
           <p>
             <label>Tracking</label>
+          </p>
+        </div>
+        <div>
+          <img id="offset" data-toggle="modal" data-target="#modal-2" src="assets/images/serverGold.svg">
+          <p>
+            <label>Offset Print</label>
           </p>
         </div>
       </div>
@@ -357,6 +363,11 @@
         $('#truck').click(function() {
           $('#modal-2 .modal-header').html('<label>Tracking</label><button type="button" class="close" data-dismiss="modal" style="color:#c3b79a; opacity:1;">&times;</button>');
           $('#modal-2 .modal-body').html('We’ve taken the guesswork out of the mail process with the utilization of in-house postal acceptance and the Intelligent Mail Barcode.');
+        });
+
+        $('#offset').click(function() {
+          $('#modal-2 .modal-header').html('<label>Offset Printing</label><button type="button" class="close" data-dismiss="modal" style="color:#c3b79a; opacity:1;">&times;</button>');
+          $('modal-2 .modal-body').html('Our offset printing services include everything from 40” Man Roland perfectors to half size five and two color Sakurais and Halm jet envelope presses.');
         });
 
         $('.services-icons img').hover(function() {
