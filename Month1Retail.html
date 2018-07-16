@@ -295,7 +295,7 @@
         }
 
         $('.gold-dust')
-          .velocity('fadeIn', { stagger: 10 })
+          .velocity('fadeIn', { delay: 2000, stagger: 10 })
           .velocity('transition.slideUpOut', { 
             stagger: 10, 
             complete: function() {
@@ -357,7 +357,7 @@
         $('.services-icons img').velocity('transition.bounceIn', { delay: 3000, stagger: 250 });
         $('.services-icons label').velocity('transition.slideDownIn', { delay: 3000, stagger: 250 });
         $('.footer').velocity('fadeIn', { delay: 3500 });
-        setTimeout(dazzle, 2500);
+        dazzle();
       };
     })();
   </script>
