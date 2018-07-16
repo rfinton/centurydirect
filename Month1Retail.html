@@ -42,6 +42,7 @@
 
     .da-button {
       cursor: pointer;
+      font-size: 2rem;
       background: #f1c232;
       background: -webkit-linear-gradient(#e9dab6, #c09207);
       background: linear-gradient(#e9dab6, #c09207);
@@ -305,6 +306,14 @@
             }
           });
       }
+
+      function setFontSize() {
+        if(innerWidth > innerHeight) {
+          if(document.body.clientHeight < innerHeight) {
+            $('p, span').css('font-size', innerHeight * 0.02 + 'pt');
+          }
+        }
+      }
     
       $(document).ready(function() {
         $('.modal-footer').click(function(ev) {
@@ -351,6 +360,7 @@
       });
 
       window.onload = function() {
+        setFontSize();
         $('.splash img').velocity('transition.expandIn', 1000);
         $('.shopping-bag').velocity('transition.flipBounceXIn', { delay: 1000 });
         $('.rewards').velocity('transition.slideDownIn', { delay: 2000 });
