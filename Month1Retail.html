@@ -73,6 +73,7 @@
       text-align: center;
       padding: 12px;
       background-image: url(assets/images/craftpaper_bg.jpeg); }
+    .social-media { display: inline-block; }
 
     .gold-dust { opacity: 0; }
     .gold-dust-1 {
@@ -93,6 +94,7 @@
     @media screen and (max-width: 420px) {
       .splash img { width: 100%; }
       .col-xs-12.col-sm-4 { padding: 0; }
+      .social-media { display: block; }
     }
   </style>
   <!-- AngularJS -->
@@ -177,10 +179,12 @@
 
     <div class="row footer section">
       &copy; 2017 Century Direct | All Rights Reserved &nbsp;&nbsp;&nbsp;
-      <i class="fa fa-facebook"></i>
-      <i class="fa fa-google-plus"></i>
-      <i class="fa fa-linkedin"></i>
-      <i class="fa fa-twitter"></i>
+      <div class="social-media">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-google-plus"></i>
+        <i class="fa fa-linkedin"></i>
+        <i class="fa fa-twitter"></i>
+      </div>
     </div>
 
     <!-- Modal -->
