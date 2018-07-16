@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en" ng-app="app" ng-controller="main as ctrl">
+<head>
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache">
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,800" rel="stylesheet">
+  <style>
+    * { font-family: 'Nunito Sans', sans-serif; font-size: 1.5rem; }
+    body { background-color: #000000; }
+    .modal-content { background: black; }
+    label { color: #e9dab6; }
+    .modal-content { 
+      border-radius: 6px;
+      border: solid 1px #c09207; }
+
+    .section.splash {
+      text-align: center;
+      background: radial-gradient(gray, black, black); }
+    .splash img { width: 35%; }
+
+    body > div > div:nth-child(2) { 
+      text-align: center;
+      background-color: black; }
+    img.shopping-bag { width: 100%; }
+    img.rewards { position: absolute; top: 0; left: 0; width: 50%; }
+    div.col-xs-12.col-sm-4 { padding-left: 0; padding-right: 0; }
+    div.col-xs-12.col-sm-8 {
+      text-align: left;
+      padding: 30px;
+      background-image: url(assets/images/craftpaper_bg.jpeg);
+      background-size: cover;
+      background-repeat: no-repeat; }
+    div.col-xs-12.col-sm-8 img { width: 140px; }
+
+    .services-icons {
+      display: inline-block;
+      margin: 15px auto; }
+    .services-icons img {
+      cursor: pointer;
+      width: 80px;
+      height: 80px; }
+    .services-icons > div {
+      margin: 15px;
+      display: inline-block; }
+
+    .footer {
+      text-align: center;
+      padding: 12px;
+      background-image: url(assets/images/craftpaper_bg.jpeg); }
+    .social-media { display: inline-block; }
+
+    .gold-dust { opacity: 0; }
+    .gold-dust-1 {
+      z-index: 1;
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background-color: #c09207; }
+
+    .gold-dust-2 {
+      z-index: 1;
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background-color: #e9e9e9; }
+
+
+    @media screen and (max-width: 420px) {
+      .splash img { width: 100%; }
+      .col-xs-12.col-sm-4 { padding: 0; }
+      .social-media { display: block; }
+    }
+  </style>
+  <!-- AngularJS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
+
+  <!-- AngularFire -->
+  <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
+  <script>
+    var visitor = {
+      purl: 'RayFinton',
+      dates: [(new Date()).getTime()],
+      url: location.pathname
+    };
+  </script>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row section splash">
+      <img src="assets/images/logoWithTag.png">
+    </div>
+
+    <div class="row section">
+      <div class="col-xs-12 col-sm-4 left">
+        <img class="shopping-bag" src="assets/images/shoppingBag.jpg">
+        <img class="rewards" src="assets/images/rewards.png">
+      </div>
+
+      <div class="col-xs-12 col-sm-8">
+        <p><span style="font-weight:800">##firstname##</span>,<br>We're here to help! Thank you for your interest in Century Direct. We will be reaching out within the next 2 business days.</p>
+      </div>
+
+      <div class="services-icons">
+        <div>
+          <img id="data" data-toggle="modal" data-target="#modal-2" src="assets/images/dataGold.svg">
+          <p>
+            <label>Data</label>
+          </p>
+        </div>
+        <div>
+          <img id="digi" data-toggle="modal" data-target="#modal-2" src="assets/images/digiGold.svg">
+          <p>
+            <label>Print</label>
+          </p>
+        </div>
+        <div>
+          <img id="mail" data-toggle="modal" data-target="#modal-2" src="assets/images/mailGold.svg">
+          <p>
+            <label>Mail</label>
+          </p>
+        </div>
+        <div>
+          <img id="pack" data-toggle="modal" data-target="#modal-2" src="assets/images/packageGold.svg">
+          <p>
+            <label>Packaging</label>
+          </p>
+        </div>
+        <div>
+          <img id="hand" data-toggle="modal" data-target="#modal-2" src="assets/images/3guysGold.svg">
+          <p>
+            <label>Assembly</label>
+          </p>
+        </div>
+        <div>
+          <img id="truck" data-toggle="modal" data-target="#modal-2" src="assets/images/truckGold.svg">
+          <p>
+            <label>Tracking</label>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row footer section">
+      &copy; 2017 Century Direct | All Rights Reserved &nbsp;&nbsp;&nbsp;
+      <div class="social-media">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-google-plus"></i>
+        <i class="fa fa-linkedin"></i>
+        <i class="fa fa-twitter"></i>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modal-2" role="dialog">
+      <div class="modal-dialog">
+      
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header"></div>
+          <div class="modal-body" style="color:#c3b79a;"></div>
+        </div>
+      </div>
+    </div>
+  </div> <!-- End Bootstrap Container -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.ui.min.js"></script>
+  <script>
+    (function() {
+      var config = {
+        apiKey: "AIzaSyA8doQGd72_pTg3zws0im9kwVUFGqGUdaw",
+        authDomain: "tuneintocentury.firebaseapp.com",
+        databaseURL: "https://tuneintocentury.firebaseio.com",
+        projectId: "tuneintocentury",
+        storageBucket: "tuneintocentury.appspot.com",
+        messagingSenderId: "515938315284"
+      };
+      firebase.initializeApp(config);
+
+      var app = angular.module('app', ['firebase']);
+      app.controller('main', function($scope, $firebaseObject) {
+        var eventsRef = $firebaseObject(firebase.database().ref().child('events'));
+        firebase.database().ref().child('events/visited_landing_page/' + visitor.purl)
+          .once('value')
+          .then(function(snap) {
+            if(!snap.val()) {
+              firebase.database().ref().child('events/visited_landing_page/' + visitor.purl).set(visitor);
+            }
+            else {
+              var dates = snap.val().dates;
+              dates.push(visitor.dates[0]);
+              firebase.database().ref().child('events/visited_landing_page/' + visitor.purl + '/').update({
+                'dates': dates
+              });
+            }
+          });
+
+        $scope.viewportWidth = innerWidth;
+        $scope.viewportHeight = innerHeight;
+      });
+
+      function dazzle() {
+        for(var i = 0; i < 200; i++) {
+          var d = document.createElement('div');
+
+          if(i % 2 == 0) d.className = 'gold-dust gold-dust-1';
+          else d.className = 'gold-dust gold-dust-2';
+
+          d.style.top = Math.round(Math.random() * 20) + '%';
+          d.style.left = Math.round(Math.random() * 25) + 40 + '%';
+          $('.left').append(d);
+        }
+
+        $('.gold-dust')
+          .velocity('fadeIn', { delay: 1000, stagger: 10 })
+          .velocity('transition.slideUpOut', { 
+            stagger: 10, 
+            complete: function() {
+              $('.gold-dust').remove();
+              dazzle();
+            }
+          });
+      }
+
+      function setFontSize() {
+        if(innerWidth > innerHeight) {
+          if(document.body.clientHeight < innerHeight) {
+            $('p, span').css('font-size', innerHeight * 0.02 + 'pt');
+            $('.container-fluid').css('height', innerHeight + 'px');
+            $('.row.footer.section').css({
+              position: 'absolute',
+              bottom: 0,
+              left: '15px',
+              width: '100%'
+            });
+          }
+        }
+      }
+    
+      $(document).ready(function() {
+        $('.modal-footer').click(function(ev) {
+          $('#myModal').modal('hide');
+          $('.container-fluid, .r2').velocity('fadeOut');
+        });
+
+        $('#data').click(function() {
+          $('#modal-2 .modal-header').html('<label>Data Management</label><button type="button" class="close" data-dismiss="modal" style="color:#c3b79a; opacity:1;">&times;</button>');
+          $('#modal-2 .modal-body').html('We are SSAE 16 certified and HIPAA compliant, so your clients never have to worry about their data being compromised.');
+        });
+
+        $('#digi').click(function() {
+          $('#modal-2 .modal-header').html('<label>Digital Printing</label><button type="button" class="close" data-dismiss="modal" style="color:#c3b79a; opacity:1;">&times;</button>');
+          $('#modal-2 .modal-body').html('We have a cadre of Canon, Oce, Xerox and IBM sheetfed and web digital devices that will deliver top quality for any job.');
+        });
+
+        $('#mail').click(function() {
+          $('#modal-2 .modal-header').html('<label>Mail Services</label><button type="button" class="close" data-dismiss="modal" style="color:#c3b79a; opacity:1;">&times;</button>');
+          $('#modal-2 .modal-body').html('Our inserting machinery, equipped with read and print technology, is perfect for matching personalized enclosures to the envelopes that carries them 100% of the time. No more mismatches.');
+        });
+
+        $('#pack').click(function() {
+          $('#modal-2 .modal-header').html('<label>Packaging</label><button type="button" class="close" data-dismiss="modal" style="color:#c3b79a; opacity:1;">&times;</button>');
+          $('#modal-2 .modal-body').html('Our FDA certified packaging division can help you customize the best way to showcase your product and ensure it’s delivered on time and in good condition.');
+        });
+
+        $('#hand').click(function() {
+          $('#modal-2 .modal-header').html('<label>Hand Assembly</label><button type="button" class="close" data-dismiss="modal" style="color:#c3b79a; opacity:1;">&times;</button>');
+          $('#modal-2 .modal-body').html('Our professional assemblers know that these pieces are going to your top clients and have to be perfect every time. The unusual gets noticed and so feel free to design the unusual. We’ll put it together for you.');
+        });
+
+        $('#truck').click(function() {
+          $('#modal-2 .modal-header').html('<label>Tracking</label><button type="button" class="close" data-dismiss="modal" style="color:#c3b79a; opacity:1;">&times;</button>');
+          $('#modal-2 .modal-body').html('We’ve taken the guesswork out of the mail process with the utilization of in-house postal acceptance and the Intelligent Mail Barcode.');
+        });
+
+        $('.services-icons img').hover(function() {
+          $(this).velocity({ scaleX: [1, 1.2, 1], scaleY: [1, 1.2, 1] }, { easing: 'easeInSine', loop: true });
+        }, function() {
+          $(this).velocity('stop');
+          $(this).velocity({ scaleX: 1, scaleY: 1 });
+        });
+      });
+
+      window.onload = function() {
+        setFontSize();
+        dazzle();
+      };
+    })();
+  </script>
+</body>
+</html>
