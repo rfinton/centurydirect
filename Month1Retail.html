@@ -12,6 +12,7 @@
   <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,800" rel="stylesheet">
   <style>
     * { font-family: 'Nunito Sans', sans-serif; font-size: 1.5rem; }
+    body { background-color: #000000; }
     .modal-content { background: black; }
     label { color: #e9dab6; }
     .modal-content { 
@@ -311,6 +312,13 @@
         if(innerWidth > innerHeight) {
           if(document.body.clientHeight < innerHeight) {
             $('p, span').css('font-size', innerHeight * 0.02 + 'pt');
+            $('.container-fluid').css('height', innerHeight + 'px');
+            $('.row.footer.section').css({
+              position: 'absolute',
+              bottom: 0,
+              left: '15px',
+              width: '100%'
+            });
           }
         }
       }
