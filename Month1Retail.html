@@ -314,17 +314,12 @@
 
       function createGoldDust() {
         setTimeout(function() {
+          var f = true;
+
           for(var i = 0; i < 200; i++) {
             var d = document.createElement('div');
-
-            if(i % 2 == 0) {
-              d.className = 'gold-dust gold-dust-1';
-            }
-
-            else {
-              d.className = 'gold-dust gold-dust-2';
-            }
-
+            f ? d.className = 'gold-dust gold-dust-1' : d.className = 'gold-dust gold-dust-2'
+            f = !f;
             $('.left').append(d);
           }
 
