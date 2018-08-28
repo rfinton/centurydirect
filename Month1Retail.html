@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ng-app="app" ng-controller="main as ctrl">
+<html lang="en">
 <head>
   <meta http-equiv="pragma" content="no-cache">
   <meta http-equiv="cache-control" content="no-cache">
@@ -7,7 +7,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap-theme.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,800" rel="stylesheet">
   <style>
@@ -36,7 +37,7 @@
       text-align: left;
       display: none;
       padding: 30px;
-      background-image: url(assets/images/craftpaper_bg.jpeg);
+      background-image: url('https://s3.amazonaws.com/centurydirect/assets/images/craftpaper_bg.jpeg');
       background-size: cover;
       background-repeat: no-repeat; }
     div.col-xs-12.col-sm-8 img { width: 140px; }
@@ -74,7 +75,7 @@
       display: none;
       text-align: center;
       padding: 12px;
-      background-image: url(assets/images/craftpaper_bg.jpeg); }
+      background-image: url('https://s3.amazonaws.com/centurydirect/assets/images/craftpaper_bg.jpeg'); }
     .social-media { display: inline-block; }
 
     .gold-dust { opacity: 0; }
@@ -99,33 +100,17 @@
       .social-media { display: block; }
     }
   </style>
-  <!-- AngularJS -->
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
-
-  <!-- Firebase -->
-  <script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
-
-  <!-- AngularFire -->
-  <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
-  <script>
-    var visitor = {
-      purl: 'RayFinton',
-      dates: [(new Date()).getTime()],
-      url: location.pathname
-    };
-  </script>
 </head>
 <body>
   <div class="container-fluid">
     <div class="row section splash">
-      <img src="assets/images/logoWithTag.png">
+      <img src="https://s3.amazonaws.com/centurydirect/assets/images/logoWithTag.png">
     </div>
 
     <div class="row section">
       <div class="col-xs-12 col-sm-4 left">
-        <img class="shopping-bag" src="assets/images/shoppingBag.jpg">
-        <img class="rewards" src="assets/images/rewards.png">
+        <img class="shopping-bag" src="https://s3.amazonaws.com/centurydirect/assets/images/shoppingBag.jpg">
+        <img class="rewards" src="https://s3.amazonaws.com/centurydirect/assets/images/rewards.png">
       </div>
 
       <div class="col-xs-12 col-sm-8">
@@ -141,43 +126,43 @@
 
       <div class="services-icons">
         <div>
-          <img id="data" data-toggle="modal" data-target="#modal-2" src="assets/images/dataGold.svg">
+          <img id="data" data-toggle="modal" data-target="#modal-2" src="https://s3.amazonaws.com/centurydirect/assets/images/dataGold.svg">
           <p>
             <label>Data</label>
           </p>
         </div>
         <div>
-          <img id="digi" data-toggle="modal" data-target="#modal-2" src="assets/images/digiGold.svg">
+          <img id="digi" data-toggle="modal" data-target="#modal-2" src="https://s3.amazonaws.com/centurydirect/assets/images/digiGold.svg">
           <p>
             <label>Digital Print</label>
           </p>
         </div>
         <div>
-          <img id="mail" data-toggle="modal" data-target="#modal-2" src="assets/images/mailGold.svg">
+          <img id="mail" data-toggle="modal" data-target="#modal-2" src="https://s3.amazonaws.com/centurydirect/assets/images/mailGold.svg">
           <p>
             <label>Mail</label>
           </p>
         </div>
         <div>
-          <img id="pack" data-toggle="modal" data-target="#modal-2" src="assets/images/packageGold.svg">
+          <img id="pack" data-toggle="modal" data-target="#modal-2" src="https://s3.amazonaws.com/centurydirect/assets/images/packageGold.svg">
           <p>
             <label>Packaging</label>
           </p>
         </div>
         <div>
-          <img id="hand" data-toggle="modal" data-target="#modal-2" src="assets/images/3guysGold.svg">
+          <img id="hand" data-toggle="modal" data-target="#modal-2" src="https://s3.amazonaws.com/centurydirect/assets/images/3guysGold.svg">
           <p>
             <label>Assembly</label>
           </p>
         </div>
         <div>
-          <img id="truck" data-toggle="modal" data-target="#modal-2" src="assets/images/truckGold.svg">
+          <img id="truck" data-toggle="modal" data-target="#modal-2" src="https://s3.amazonaws.com/centurydirect/assets/images/truckGold.svg">
           <p>
             <label>Tracking</label>
           </p>
         </div>
         <div>
-          <img id="offset" data-toggle="modal" data-target="#modal-2" src="assets/images/serverGold.svg">
+          <img id="offset" data-toggle="modal" data-target="#modal-2" src="https://s3.amazonaws.com/centurydirect/assets/images/serverGold.svg">
           <p>
             <label>Offset Print</label>
           </p>
@@ -206,7 +191,7 @@
             <h4 class="modal-title" style="color:lightgray;">Please update your contact info:</h4>
           </div>
           <div class="modal-body">
-            <form method="" action="Month1RetailThanks.html">
+            <form method="post">
               <div class="form-group">
                 <label for="fn">First name:</label>
                 <input id="fn" class="form-control" type="text" name="firstname" value="##firstname##">
@@ -253,44 +238,12 @@
     </div>
   </div> <!-- End Bootstrap Container -->
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.ui.min.js"></script>
   <script>
     (function() {
-      var config = {
-        apiKey: "AIzaSyA8doQGd72_pTg3zws0im9kwVUFGqGUdaw",
-        authDomain: "tuneintocentury.firebaseapp.com",
-        databaseURL: "https://tuneintocentury.firebaseio.com",
-        projectId: "tuneintocentury",
-        storageBucket: "tuneintocentury.appspot.com",
-        messagingSenderId: "515938315284"
-      };
-      firebase.initializeApp(config);
-
-      var app = angular.module('app', ['firebase']);
-      app.controller('main', function($scope, $firebaseObject) {
-        var eventsRef = $firebaseObject(firebase.database().ref().child('events'));
-        firebase.database().ref().child('events/visited_landing_page/' + visitor.purl)
-          .once('value')
-          .then(function(snap) {
-            if(!snap.val()) {
-              firebase.database().ref().child('events/visited_landing_page/' + visitor.purl).set(visitor);
-            }
-            else {
-              var dates = snap.val().dates;
-              dates.push(visitor.dates[0]);
-              firebase.database().ref().child('events/visited_landing_page/' + visitor.purl + '/').update({
-                'dates': dates
-              });
-            }
-          });
-
-        $scope.viewportWidth = innerWidth;
-        $scope.viewportHeight = innerHeight;
-      });
-
       function dustRand() {
         var dust = $('.gold-dust');
 
